@@ -1,6 +1,8 @@
 # Project-Alpha
 
-The purpose of this project, Project-Alpha is to document my run-throughs and review of some core Azure services deployments/configurations using Azure CLI and Bicpe. My goal is to just demonstrate basic level configurations and resources I used to deploy Azure resources using Bicep.
+The purpose of this project, Project-Alpha is to document my run-throughs and review of some core Azure services deployments/configurations using Azure CLI and Bicpe.
+
+My goal is to just demonstrate basic level configurations and resources I used to deploy Azure resources using Bicep
 
 The following is a list of Azure Services I will be focusing on for this project:
 
