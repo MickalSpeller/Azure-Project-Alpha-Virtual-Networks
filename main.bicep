@@ -2,7 +2,7 @@ targetScope = 'subscription'
 
 resource resourceGroup 'Microsoft.Resources/resourceGroups@2025-03-01' = {
   name: 'rg-mks-dev'
-  location: 'westus2'
+  location: 'eastus'
 }
 module networkModule 'resources.bicep' = {
   name: 'networkModule'
@@ -10,8 +10,8 @@ module networkModule 'resources.bicep' = {
   params: {
   }
 }
-module storageAccount 'storage.bicep' = {
-  name: 'storageAccount'
+module storageModule 'storage.bicep' = {
+  name: 'storageModule'
   scope: resourceGroup
   params: {
   }
