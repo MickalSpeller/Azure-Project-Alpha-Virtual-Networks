@@ -10,3 +10,9 @@ module networkModule 'resources.bicep' = {
   params: {
   }
 }
+module storageAccount 'storage.bicep' = {
+  name: 'storageAccount'
+  scope: resourceGroup
+  params: {
+  }
+}
