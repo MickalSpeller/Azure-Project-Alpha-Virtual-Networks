@@ -16,7 +16,7 @@ The following is a list of Azure network realated services I will be focusing on
         * Load Balancer
         * NAT Gateway
         * Private Link
-        * Peering Services
+        * Virtual Network Peering
         * Local Network Gateways
         * Virtual Network Gateway
         * Web Application Firewall
