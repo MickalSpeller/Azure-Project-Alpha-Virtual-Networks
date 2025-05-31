@@ -29,6 +29,7 @@ targetScope = 'subscription'
 resource resourceGroup 'Microsoft.Resources/resourceGroups@2025-03-01' = {
   name: 'rg-mks-dev'
   location: 'eastus'
+}
 ```
 
 The following is a list of resources I used to build and test this deployment.
