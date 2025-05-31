@@ -1,35 +1,21 @@
-# Project-Alpha
+# Project ALPHA : Virtual Network
+Welcome. The purpose of this series of projects (Project ALPHA) is to document my run-throughs wtih some of the core Azure services as it relates to configurations and deployments using Azure CLI and Bicep and Terraform. 
 
-The purpose of this project, Project-Alpha is to document my run-throughs and review of some core Azure services deployments/configurations using Azure CLI and Bicep.
+Download this repo to obtain all configuration files in this project.
 
-My goal is to just demonstrate basic level configurations and resources I used to deploy Azure resources using Bicep. This is useful for my personal education/practice and can also benefit those who are early on in their Azure/Bicep knowledge seeking endeavors.
+# Project Scope
+In this project, I will build out Azure Virtual Network resources using Bicep code and Terraform.
 
-## 
-The following is a list of Azure network realated services I will be focusing on for this project:
+# Setup
+To complete this project, it is  recommended to have the following tools available:
 
-        * Virtual Networks
-        * Azure DNS
-        * Express Routes
-        * Virtual WAN
-        * Network Watcher
-        * Hub-Spoke Topology
-        * Firewall
-        * Load Balancer
-        * NAT Gateway
-        * Private Link
-        * Virtual Network Peering
-        * Local Network Gateways
-        * Virtual Network Gateway
-        * Web Application Firewall
-        * Virtual Network Service Endpoint
+Azure Account
+Visual Studio Code
+Azure CLI Installed locally
+Host running Terraform
 
+Checkout the Resources Section for download links to these tools.
 
-Useful Azure CLI Commands:
+# Resources
 
-#Deploy To Subscription scope using Azure CLI
-az deployment sub create --name <name> --location <location> --template-file <path-to-bicep>
-ex. az deployment sub create --name mks-deployment --location westus2 --template-file main.bicep
-
-#Delete Deployment at Subscriptions scope using Azure CLI
-az deployment sub delete --name  <deployment_name> --no-wait
-ex. az deployment sub delete -n mks-deployment --no-wait
+The following is a list of resources I used to build and test this deployment.
