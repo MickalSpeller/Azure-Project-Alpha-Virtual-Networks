@@ -1,5 +1,5 @@
 # Azure Project ALPHA : Virtual Network
-Welcome. The purpose of this series of projects (Project ALPHA) is to document my run-throughs with some of the core Azure services as it relates to configurations and deployments using Azure CLI and Bicep and Terraform. 
+Welcome. The purpose of this series of projects (Project ALPHA) is to document my run-throughs with some of the core Azure services as it relates to configurations and deployments using Azure CLI and Bicep and Terraform. These deplyoments are conidered foundational level to gain understanding and familiarity with deploying these resources.
 
 Download this repo to obtain all configuration files in this project.
 
