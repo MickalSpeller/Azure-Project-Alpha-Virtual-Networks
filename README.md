@@ -9,8 +9,8 @@ In this project, I will build out Azure Virtual Network resources using Bicep co
 # Setup
 To complete this project, it is  recommended to have the following tools available:
 
-Azure
-Visual Studio
+Azure  
+Visual Studio  
 
 
 Checkout the Resources Section for download links to these tools.
