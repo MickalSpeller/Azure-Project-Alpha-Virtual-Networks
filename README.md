@@ -4,7 +4,11 @@ Welcome. The purpose of this series of projects (Project ALPHA) is to document m
 Download this repo to obtain all configuration files in this project.
 
 # Project Scope
-In this project, I will build out Azure Virtual Network resources using Bicep code and Terraform.
+In this project, I deployed the following:
+
+2 Virtual Networks  
+4 total subnets -- two subnets in each virtual network
+1 Network Peering
 
 # Setup
 To complete this project, it is recommended to have the following tools available:
@@ -16,6 +20,15 @@ Terraform
 
 Checkout the Resources Section for download links to these tools.
 
-# Resources
+# Code Snippets
+
+The following code is used to deploy the resources at the Azure Subscription level:
+```
+targetScope = 'subscription'
+
+resource resourceGroup 'Microsoft.Resources/resourceGroups@2025-03-01' = {
+  name: 'rg-mks-dev'
+  location: 'eastus'
+```
 
 The following is a list of resources I used to build and test this deployment.
