@@ -11,8 +11,8 @@ To complete this project, it is  recommended to have the following tools availab
 
 Azure Account
 Visual Studio Code
-Azure CLI Installed locally
-Host running Terraform
+Azure CLI 
+Terraform
 
 Checkout the Resources Section for download links to these tools.
 
