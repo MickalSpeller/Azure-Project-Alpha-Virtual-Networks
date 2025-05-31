@@ -7,11 +7,12 @@ Download this repo to obtain all configuration files in this project.
 In this project, I will build out Azure Virtual Network resources using Bicep code and Terraform.
 
 # Setup
-To complete this project, it is  recommended to have the following tools available:
+To complete this project, it is recommended to have the following tools available:
 
-Azure  
-Visual Studio  
-
+Azure Account  
+Visual Studio Code w/Bicep extension installed  
+Azure CLI  
+Terraform  
 
 Checkout the Resources Section for download links to these tools.
 
