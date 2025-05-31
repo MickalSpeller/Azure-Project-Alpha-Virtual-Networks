@@ -23,7 +23,7 @@ Checkout the Resources Section for download links to these tools.
 # Code Snippets
 
 The following code is used to deploy the resources at the Azure Subscription level:
-```
+```bicep
 targetScope = 'subscription'
 
 resource resourceGroup 'Microsoft.Resources/resourceGroups@2025-03-01' = {
