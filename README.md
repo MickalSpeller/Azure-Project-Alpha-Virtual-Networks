@@ -1,4 +1,4 @@
-# Azure Project ALPHA : Multi-Tier Azure VNet With NGSs and VM Segmentation
+# Azure Project ALPHA : Multi-Tier Azure VNet w/ NGSs and VM Segmentation
 
 
 
