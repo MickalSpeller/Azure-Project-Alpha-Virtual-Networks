@@ -1,27 +1,30 @@
-# Azure Project ALPHA : Virtual Network
-Welcome. The purpose of this series of projects (Project ALPHA) is to document my run-throughs with some of the core Azure services as it relates to configurations and deployments using Azure CLI, Bicep, Terraform and other automated tools. This deplyoment is considered foundational level to gain understanding and familiarity with these core services.
+# Azure Project ALPHA : Multi-Tier Azure VNet With NGSs and VM Segmentation
 
-Download this repo to obtain all configuration files in this project.
+
 
 # Project Scope
-In this project, I deployed the following:
+Deployed a secure multi-tier architecture in Azure using VNETS, Subnets and NSGs, and VMs to simulate enterprise-level network segmentation in Azure Cloud.
 
-2 Virtual Networks  
-4 total subnets -- two subnets in each virtual network
-1 Network Peering
+# Deployment Ojbecives
+To simulate real world, production style clould envioronments with subnet isolation and access control, while practicing virtual network design and Azure firewall principles.
 
-# Setup
-To complete this project, it is recommended to have the following tools available:
-
-Azure Account  
+# Technologies Implemented
+Virtual Networks / Subnets
+Network Peering
+Virtual Machines
+Network Security Groups
 Visual Studio Code w/Bicep extension installed  
 Azure CLI  
 Terraform  
 
-Checkout the Resources Section for download links to these tools.
+# Architecture Overview
+2 Virtual Networks
+4 total subnets -- two subnets in each virtual network 
+1 Network Peering
+2 NSG 
+3 Virtual Machines
 
-# Code Snippets
-
+# Notable Code Snippets
 The following code is used to deploy the resources at the Azure Subscription level:
 ```bicep
 targetScope = 'subscription'
@@ -31,5 +34,11 @@ resource resourceGroup 'Microsoft.Resources/resourceGroups@2025-03-01' = {
   location: 'eastus'
 }
 ```
-
 The following is a list of resources I used to build and test this deployment.
+
+# Network Security Configurations
+Configured NSGs to block unauthorized movement between subnets
+Used Azure Bastion to eliminate public IP exposure
+Role-based access control (RBAC) configured for resource-level permissions
+
+# Additional Resources
