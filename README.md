@@ -8,7 +8,7 @@ Deployed a secure multi-tier architecture in Azure using VNETS, Subnets and NSGs
 # Deployment Ojbecives
 To simulate real world, production style clould envioronments with subnet isolation and access control, while practicing virtual network design and Azure firewall principles.
 
-# Technologies Implemented
+# Technologies Used 
 Virtual Networks / Subnets  
 Network Peering  
 Virtual Machines  
@@ -24,7 +24,17 @@ Terraform
 2 NSG  
 3 Virtual Machines  
 
-# Notable Code Snippets
+# Network Security Configurations
+Configured NSGs to block unauthorized movement between subnets  
+Used Azure Bastion to eliminate public IP exposure  
+Role-based access control (RBAC) configured for resource-level permissions  
+
+# Outcome & Results
+Successfully segmented traffic between subnets using custom NSG rules  
+Validated traffic flow using ping and Azure Network Watcher  
+Gained real-world understanding of zero-trust networking in cloud environments
+
+# Code Snippets
 The following code is used to deploy the resources at the Azure Subscription level:
 ```bicep
 targetScope = 'subscription'
@@ -36,9 +46,5 @@ resource resourceGroup 'Microsoft.Resources/resourceGroups@2025-03-01' = {
 ```
 The following is a list of resources I used to build and test this deployment.
 
-# Network Security Configurations
-Configured NSGs to block unauthorized movement between subnets  
-Used Azure Bastion to eliminate public IP exposure  
-Role-based access control (RBAC) configured for resource-level permissions  
 
 # Additional Resources
