@@ -48,3 +48,14 @@ resource subnet02c 'Microsoft.Network/virtualNetworks/subnets@2024-05-01' = {
     addressPrefix: '10.2.3.0/24'
   }
 }
+resource virtualNetwork02 'Microsoft.Network/virtualNetworks@2024-05-01' = {
+  name: 'vnet02'
+  location: resourceGroup().location
+  properties: {
+    addressSpace: {
+      addressPrefixes: [
+        '10.2.0.0/16'
+      ]
+    }
+  }
+}
