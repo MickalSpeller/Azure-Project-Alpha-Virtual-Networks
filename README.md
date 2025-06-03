@@ -18,7 +18,7 @@ Azure CLI
 Terraform  
 
 # Architecture Overview
-![azure-vnet-topology](https://github.com/user-attachments/assets/9447f223-d0c0-4b38-b604-4076ad780669)
+![azure-vnet-topology](https://github.com/user-attachments/assets/9447f223-d0c0-4b38-b604-4076ad780669)  
 2 Virtual Networks  
 4 total subnets -- two subnets in each virtual network  
 1 Network Peering  
