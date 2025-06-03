@@ -48,4 +48,10 @@ resource resourceGroup 'Microsoft.Resources/resourceGroups@2025-03-01' = {
 The following is a list of resources I used to build and test this deployment.
 
 
-# Additional Resources
+# Additional Resources  
+Bicep Documentation  
+https://learn.microsoft.com/en-us/azure/azure-resource-manager/bicep/  
+
+
+
+
