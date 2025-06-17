@@ -24,13 +24,7 @@ This infrastructure-as-code solution deploys:
 | `Azure Bastion` *(optional)* | For secure, jump-box-free RDP/SSH access |
  
 
-# Architecture Overview
-![azure-vnet-topology](https://github.com/user-attachments/assets/9447f223-d0c0-4b38-b604-4076ad780669)  
-2 Virtual Networks  
-4 total subnets -- two subnets in each virtual network  
-1 Network Peering  
-2 NSG  
-3 Virtual Machines  
+# Architecture Diagram
 
 # Network Security Configurations
 Configured NSGs to block unauthorized movement between subnets  
