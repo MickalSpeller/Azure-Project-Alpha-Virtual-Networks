@@ -43,7 +43,7 @@ az deployment sub create \
   --location eastus \
   --template-file ./bicep/main.bicep \
   --parameters @./parameters/dev.parameters.json
-
+```
 
 
 # Network Security Configurations
