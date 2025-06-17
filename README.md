@@ -9,13 +9,15 @@ Deployed a secure multi-tier architecture in Azure using VNETS, Subnets and NSGs
 To simulate real world, production style clould envioronments with subnet isolation and access control, while practicing virtual network design and Azure firewall principles.
 
 # Technologies Used 
-Virtual Networks / Subnets  
-Network Peering  
-Virtual Machines  
-Network Security Groups  
-Visual Studio Code w/Bicep extension installed  
-Azure CLI  
-Terraform  
+| Resource | Description |
+|----------|-------------|
+| `Virtual Network` | Hub and spoke VNets with non-overlapping CIDRs |
+| `Subnet(s)` | Separate subnets for workload, management, etc. |
+| `VNet Peering` | Fully-meshed connections with correct flags |
+| `Route Tables` | Custom UDRs to route traffic via hub |
+| `NSGs` | Applied per subnet for fine-grained control |
+| `Azure Bastion` *(optional)* | For secure, jump-box-free RDP/SSH access |
+ 
 
 # Architecture Overview
 ![azure-vnet-topology](https://github.com/user-attachments/assets/9447f223-d0c0-4b38-b604-4076ad780669)  
