@@ -27,22 +27,20 @@ This infrastructure-as-code solution deploys:
 # Architecture Diagram
 
 
----
 
-## 🚀 Deployment Instructions
+# Deployment Instructions
 
-### 🛠️ Prerequisites
+### Prerequisites
 - Azure CLI installed and logged in
 - Permissions to deploy resources in a subscription
 - Bicep CLI v0.20+ (or use Azure CLI with built-in support)
 
-### 🧪 Deploy via Azure CLI
+### Deploy via Azure CLI
 
 ```bash
 az deployment sub create \
   --location eastus \
-  --template-file ./bicep/main.bicep \
-  --parameters @./parameters/dev.parameters.json
+  --template-file main.bicep \
 ```
 
 
@@ -62,7 +60,7 @@ The following code is used to deploy the resources at the Azure Subscription lev
 targetScope = 'subscription'
 
 resource resourceGroup 'Microsoft.Resources/resourceGroups@2025-03-01' = {
-  name: 'rg-mks-dev'
+  name: 'project-alpla'
   location: 'eastus'
 }
 ```
