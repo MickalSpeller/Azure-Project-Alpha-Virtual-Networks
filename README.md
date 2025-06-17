@@ -29,8 +29,12 @@ This infrastructure-as-code solution deploys:
 
 
 # Deployment Instructions
-
-📂 project-alpha
+.
+├── main.bicep
+├── resources.bicep
+├── nsg.bicep
+└── README.md
+📂 your-project-folder
 ├── main.bicep
 ├── hub.bicep
 ├── spoke.bicep
@@ -39,7 +43,6 @@ This infrastructure-as-code solution deploys:
 ├── vm.bicep
 ├── dev.parameters.json
 └── deploy.ps1
-
 
 ### Prerequisites
 - Azure CLI installed and logged in
