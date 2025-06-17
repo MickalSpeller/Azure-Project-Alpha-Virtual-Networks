@@ -26,6 +26,26 @@ This infrastructure-as-code solution deploys:
 
 # Architecture Diagram
 
+
+---
+
+## 🚀 Deployment Instructions
+
+### 🛠️ Prerequisites
+- Azure CLI installed and logged in
+- Permissions to deploy resources in a subscription
+- Bicep CLI v0.20+ (or use Azure CLI with built-in support)
+
+### 🧪 Deploy via Azure CLI
+
+```bash
+az deployment sub create \
+  --location eastus \
+  --template-file ./bicep/main.bicep \
+  --parameters @./parameters/dev.parameters.json
+
+
+
 # Network Security Configurations
 Configured NSGs to block unauthorized movement between subnets  
 Used Azure Bastion to eliminate public IP exposure  
