@@ -31,19 +31,13 @@ This infrastructure-as-code solution deploys:
 # Deployment Instructions
 .
 ├── main.bicep
-├── resources.bicep
-├── nsg.bicep
+├── function-app/
+│   ├── submit-feedback/
+│   │   └── index.js
+│   │   └── function.json
+├── images/
+│   └── architecture.png
 └── README.md
-📂 your-project-folder
-├── main.bicep
-├── hub.bicep
-├── spoke.bicep
-├── peerings.bicep
-├── nsg.bicep
-├── vm.bicep
-├── dev.parameters.json
-└── deploy.ps1
-
 ### Prerequisites
 - Azure CLI installed and logged in
 - Permissions to deploy resources in a subscription
