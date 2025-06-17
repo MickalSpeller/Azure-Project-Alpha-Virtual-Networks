@@ -6,7 +6,12 @@
 Deployed a secure multi-tier architecture in Azure using VNETS, Subnets and NSGs, and VMs to simulate enterprise-level network segmentation in Azure Cloud.
 
 # Deployment Ojbecives
-To simulate real world, production style clould envioronments with subnet isolation and access control, while practicing virtual network design and Azure firewall principles.
+This infrastructure-as-code solution deploys:
+- A **hub virtual network** with shared resources like a Bastion host or firewall
+- Two or more **spoke VNets** for application workloads
+- **Peering connections** between hub and spokes
+- **User-Defined Routes (UDRs)** to direct traffic through the hub
+- **Network Security Groups (NSGs)** for segmentation
 
 # Technologies Used 
 | Resource | Description |
