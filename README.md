@@ -26,18 +26,16 @@ This infrastructure-as-code solution deploys:
 
 # Architecture Diagram
 
-
+# Folder Structure
+```
+.
+├── main.bicep              # Entry point
+├── resources.bicep         # Hub VNet, Firewall, route tables
+└── README.md               # Project documentation
+```
 
 # Deployment Instructions
-.
-├── main.bicep
-├── function-app/
-│   ├── submit-feedback/
-│   │   └── index.js
-│   │   └── function.json
-├── images/
-│   └── architecture.png
-└── README.md
+
 ### Prerequisites
 - Azure CLI installed and logged in
 - Permissions to deploy resources in a subscription
