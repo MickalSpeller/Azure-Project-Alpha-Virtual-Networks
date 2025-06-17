@@ -30,6 +30,17 @@ This infrastructure-as-code solution deploys:
 
 # Deployment Instructions
 
+📂 project-alpha
+├── main.bicep
+├── hub.bicep
+├── spoke.bicep
+├── peerings.bicep
+├── nsg.bicep
+├── vm.bicep
+├── dev.parameters.json
+└── deploy.ps1
+
+
 ### Prerequisites
 - Azure CLI installed and logged in
 - Permissions to deploy resources in a subscription
@@ -45,9 +56,9 @@ az deployment sub create \
 
 
 # Network Security Configurations
-Configured NSGs to block unauthorized movement between subnets  
-Used Azure Bastion to eliminate public IP exposure  
-Role-based access control (RBAC) configured for resource-level permissions  
+- Configured NSGs to block unauthorized movement between subnets  
+- Used Azure Bastion to eliminate public IP exposure  
+- Role-based access control (RBAC) configured for resource-level permissions  
 
 # Outcome & Results
 Successfully segmented traffic between subnets using custom NSG rules  
