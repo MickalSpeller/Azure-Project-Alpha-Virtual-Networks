@@ -12,18 +12,23 @@ module networkResources 'networkResources.bicep' = {
   name: 'networkResources'
   scope: resourceGroup
   params: { 
-    location: location
   }
 }
 module virtualMachines01 'virtualMachines-01.bicep' = {
   name: 'virtualMachines01'
   scope: resourceGroup
+  dependsOn: [
+    networkResources
+  ]
   params: { 
   }
 }
 module virtualMachines02 'virtualMachines-02.bicep' = {
   name: 'virtualMachines02'
   scope: resourceGroup
+  dependsOn: [
+    networkResources
+  ]
   params: { 
   }
 }
