@@ -101,3 +101,29 @@ resource peerSiteAToHub 'Microsoft.Network/virtualNetworks/virtualNetworkPeering
     }
   }
 }
+resource peerHubToSiteB 'Microsoft.Network/virtualNetworks/virtualNetworkPeerings@2020-07-01' = {
+  name: 'peer-hub-to-siteB'
+  parent: hubVnet01
+  properties: {
+    allowVirtualNetworkAccess: true
+    allowForwardedTraffic: true
+    allowGatewayTransit: false
+    useRemoteGateways: false
+    remoteVirtualNetwork: {
+      id: siteBVnet01.id
+    }
+  }
+}
+resource peerSiteBToHub 'Microsoft.Network/virtualNetworks/virtualNetworkPeerings@2020-07-01' = {
+  name: 'peer-siteB-to-hub'
+  parent: siteBVnet01
+  properties: {
+    allowVirtualNetworkAccess: true
+    allowForwardedTraffic: true
+    allowGatewayTransit: false
+    useRemoteGateways: false
+    remoteVirtualNetwork: {
+      id: hubVnet01.id
+    }
+  }
+}
