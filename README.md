@@ -8,7 +8,7 @@ Deployed a secure multi-tier architecture in Azure using VNETS, Subnets and NSGs
 # Deployment Ojbecives
 This infrastructure-as-code solution deploys:
 - A **hub virtual network** with shared resources like a Bastion host or firewall
-- Two or more **spoke VNets** for application workloads
+- Two **spoke VNets** (SiteA & SiteB) for application workloads
 - **Peering connections** between hub and spokes
 - **User-Defined Routes (UDRs)** to direct traffic through the hub
 - **Network Security Groups (NSGs)** for segmentation
@@ -29,10 +29,15 @@ This infrastructure-as-code solution deploys:
 # Folder Structure
 ```
 .
+<<<<<<< HEAD
 ├── main.bicep              # Define Modules to deploy
 ├── networkResources.bicep  # Vnets for Hub, SiteA and SiteB
 ├── virtualMachine-01.bicep # Virtual Machine for Site A
 ├── virtualMachine-02.bicep # Virtual Machine for Site B
+=======
+├── main.bicep              # Entry point
+├── networRresources.bicep  # Hub VNet, peering
+>>>>>>> d796e38 (update)
 └── README.md               # Project documentation
 ```
 
@@ -42,6 +47,7 @@ This infrastructure-as-code solution deploys:
 - Azure CLI installed and logged in
 - Permissions to deploy resources in a subscription
 - Bicep CLI v0.20+ (or use Azure CLI with built-in support)
+- Visual Studio Code & GitHub repository setup
 
 ### Deploy via Azure CLI
 
