@@ -88,3 +88,16 @@ resource peerHubToSiteA 'Microsoft.Network/virtualNetworks/virtualNetworkPeering
     }
   }
 }
+resource peerSiteAToHub 'Microsoft.Network/virtualNetworks/virtualNetworkPeerings@2020-07-01' = {
+  name: 'peer-siteA-to-hub'
+  parent: hubVnet01
+  properties: {
+    allowVirtualNetworkAccess: true
+    allowForwardedTraffic: true
+    allowGatewayTransit: false
+    useRemoteGateways: false
+    remoteVirtualNetwork: {
+      id: hubVnet01.id
+    }
+  }
+}
