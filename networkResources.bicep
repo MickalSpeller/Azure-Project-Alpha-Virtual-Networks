@@ -81,10 +81,10 @@ resource peerHubToSiteA 'Microsoft.Network/virtualNetworks/virtualNetworkPeering
   properties: {
     allowVirtualNetworkAccess: true
     allowForwardedTraffic: true
-    allowGatewayTransit: true
-    useRemoteGateways: true
+    allowGatewayTransit: false
+    useRemoteGateways: false
     remoteVirtualNetwork: {
-      id: siteAVnet01.name
+      id: siteAVnet01.id
     }
   }
 }
