@@ -1,5 +1,14 @@
 param location string = 'eastus'
 
+param siteAPrefix string = '10.20.0.0/16'
+param siteASubnet1 string = '10.20.1.0/24'
+param siteASubnet2 string = '10.20.2.0/24'
+
+param siteBPrefix string = '10.30.0.0/16'
+param siteBSubnet1 string = '10.30.1.0/24'
+param siteBSubnet2 string = '10.30.2.0/24'
+
+
 resource hubVnet01 'Microsoft.Network/virtualNetworks@2019-11-01' = {
   name: 'hub-vnet-01'
   location: location
@@ -31,22 +40,20 @@ resource siteAVnet01 'Microsoft.Network/virtualNetworks@2019-11-01' = {
   properties: {
     addressSpace: {
       addressPrefixes: [
-        '10.20.0.0/16'
+        siteAPrefix
       ]
     }
     subnets: [
       {
         name: 'siteA-sub-10-20-1-0'
-        id: 'siteA-sub-10-20-1-0'
         properties: { 
-          addressPrefix: '10.20.1.0/24'
+          addressPrefix: siteASubnet1
         }
       }
       {
         name: 'siteA-sub-10-20-2-0'
-        id: 'siteA-sub-10-20-2-0'
         properties: {
-          addressPrefix: '10.20.2.0/24'
+          addressPrefix: siteASubnet2
         }
       }
     ]
@@ -58,22 +65,20 @@ resource siteBVnet01 'Microsoft.Network/virtualNetworks@2019-11-01' = {
   properties: {
     addressSpace: {
       addressPrefixes: [
-        '10.30.0.0/16'
+        siteBPrefix
       ]
     }
     subnets: [
       {
         name: 'siteb-sub-10-30-1-0'
-        id: 'siteb-sub-10-30-1-0'
         properties: {
-          addressPrefix: '10.30.1.0/24'
+          addressPrefix: siteBSubnet1
         }
       }
       {
         name: 'siteb-sub-10-30-2-0'
-        id: 'siteb-sub-10-30-2-0'
         properties: {
-          addressPrefix: '10.30.2.0/24'
+          addressPrefix: siteBSubnet2
         }
       }
     ]
