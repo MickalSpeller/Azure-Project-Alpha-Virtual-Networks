@@ -50,7 +50,7 @@ resource siteAVnet01 'Microsoft.Network/virtualNetworks@2019-11-01' = {
     ]
   }
 }
-resource virtualNetwork 'Microsoft.Network/virtualNetworks@2019-11-01' = {
+resource siteBVnet01 'Microsoft.Network/virtualNetworks@2019-11-01' = {
   name: 'siteB-vnet-01'
   location: 'canadaeast'
   properties: {
@@ -73,5 +73,18 @@ resource virtualNetwork 'Microsoft.Network/virtualNetworks@2019-11-01' = {
         }
       }
     ]
+  }
+}
+resource peerHubToSiteA 'Microsoft.Network/virtualNetworks/virtualNetworkPeerings@2020-07-01' = {
+  name: 'peer-hub-to-siteA'
+  parent: hubVnet01
+  properties: {
+    allowVirtualNetworkAccess: true
+    allowForwardedTraffic: true
+    allowGatewayTransit: true
+    useRemoteGateways: true
+    remoteVirtualNetwork: {
+      id: siteAVnet01.name
+    }
   }
 }
