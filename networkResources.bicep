@@ -27,7 +27,7 @@ resource hubVnet01 'Microsoft.Network/virtualNetworks@2019-11-01' = {
 }
 resource siteAVnet01 'Microsoft.Network/virtualNetworks@2019-11-01' = {
   name: 'siteA-vnet-01'
-  location: location
+  location: 'westus'
   properties: {
     addressSpace: {
       addressPrefixes: [
@@ -52,7 +52,7 @@ resource siteAVnet01 'Microsoft.Network/virtualNetworks@2019-11-01' = {
 }
 resource virtualNetwork 'Microsoft.Network/virtualNetworks@2019-11-01' = {
   name: 'siteB-vnet-01'
-  location: location
+  location: 'canadaeast'
   properties: {
     addressSpace: {
       addressPrefixes: [
