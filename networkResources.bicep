@@ -17,7 +17,7 @@ resource hubVnet01 'Microsoft.Network/virtualNetworks@2019-11-01' = {
         }
       }
       {
-        name: 'hub-Subnet-10.10.2.0'
+        name: 'hub-Subnet-10-10-2-0'
         properties: {
           addressPrefix: '10.10.2.0/24'
         }
@@ -36,7 +36,7 @@ resource siteAVnet01 'Microsoft.Network/virtualNetworks@2019-11-01' = {
     }
     subnets: [
       {
-        name: 'siteA-sub-10.20.1.0'
+        name: 'siteA-sub-10-20-1-0'
         properties: {
           addressPrefix: '10.20.1.0/24'
         }
