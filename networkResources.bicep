@@ -1,6 +1,6 @@
 param location string
 
-resource hubVirtualNetwork 'Microsoft.Network/virtualNetworks@2019-11-01' = {
+resource hubVnet01 'Microsoft.Network/virtualNetworks@2019-11-01' = {
   name: 'hub-vnet-01'
   location: location
   properties: {
@@ -11,23 +11,23 @@ resource hubVirtualNetwork 'Microsoft.Network/virtualNetworks@2019-11-01' = {
     }
     subnets: [
       {
-        name: 'hub-subnet-10-10-1-0'
+        name: 'hub-Subnet-10-10-1-0'
         properties: {
-          addressPrefix: '10.10.0.0/24'
+          addressPrefix: '10.10.1.0/24'
         }
       }
       {
-        name: 'hub-subnet-10-10-2-0'
+        name: 'hub-Subnet-10.10.2.0'
         properties: {
-          addressPrefix: '10.0.1.0/24'
+          addressPrefix: '10.10.2.0/24'
         }
       }
     ]
   }
 }
-resource siteAVirtualNetwork 'Microsoft.Network/virtualNetworks@2019-11-01' = {
+resource siteAVnet01 'Microsoft.Network/virtualNetworks@2019-11-01' = {
   name: 'siteA-vnet-01'
-  location: 'westus'
+  location: location
   properties: {
     addressSpace: {
       addressPrefixes: [
@@ -36,15 +36,40 @@ resource siteAVirtualNetwork 'Microsoft.Network/virtualNetworks@2019-11-01' = {
     }
     subnets: [
       {
-        name: 'siteA-subnet-10-20-1-0'
+        name: 'siteA-sub-10.20.1.0'
         properties: {
           addressPrefix: '10.20.1.0/24'
         }
       }
       {
-        name: 'siteA-subnet-10-20-2-0'
+        name: 'siteA-sub-10-20-2-0'
         properties: {
           addressPrefix: '10.20.2.0/24'
+        }
+      }
+    ]
+  }
+}
+resource virtualNetwork 'Microsoft.Network/virtualNetworks@2019-11-01' = {
+  name: 'siteB-vnet-01'
+  location: location
+  properties: {
+    addressSpace: {
+      addressPrefixes: [
+        '10.30.0.0/16'
+      ]
+    }
+    subnets: [
+      {
+        name: 'siteb-sub-10-30-1-0'
+        properties: {
+          addressPrefix: '10.30.1.0/24'
+        }
+      }
+      {
+        name: 'siteb-sub-10-30-2-0'
+        properties: {
+          addressPrefix: '10.30.2.0/24'
         }
       }
     ]
