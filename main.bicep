@@ -1,20 +1,17 @@
+param resourceGroupName string
+param location string
+
 targetScope = 'subscription'
 
-resource resourceGroup 'Microsoft.Resources/resourceGroups@2025-03-01' = {
-  name: 'project-alpha'
-  location: 'eastus'
+resource resourceGroup 'Microsoft.Resources/resourceGroups@2021-04-01' = {
+  name: resourceGroupName
+  location: location
 }
-module networkModule 'resources.bicep' = {
-  name: 'networkModule'
+
+module networkResources 'networkResources.bicep' = {
+  name: 'networkResources'
   scope: resourceGroup
-  params: {
+  params: { 
+    location: location
   }
 }
-/*
-module storageModule 'storage.bicep' = {
-  name: 'storageModule'
-  scope: resourceGroup
-  params: {
-  }
-}
-*/
