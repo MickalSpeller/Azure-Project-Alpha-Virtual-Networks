@@ -1,4 +1,4 @@
-param location string
+param location string = 'eastus'
 
 resource hubVnet01 'Microsoft.Network/virtualNetworks@2019-11-01' = {
   name: 'hub-vnet-01'
@@ -52,7 +52,7 @@ resource siteAVnet01 'Microsoft.Network/virtualNetworks@2019-11-01' = {
 }
 resource siteBVnet01 'Microsoft.Network/virtualNetworks@2019-11-01' = {
   name: 'siteB-vnet-01'
-  location: 'canadaeast'
+  location: 'canadacentral'
   properties: {
     addressSpace: {
       addressPrefixes: [

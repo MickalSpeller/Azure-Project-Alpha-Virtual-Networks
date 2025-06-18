@@ -15,3 +15,15 @@ module networkResources 'networkResources.bicep' = {
     location: location
   }
 }
+module virtualMachines01 'virtualMachines-01.bicep' = {
+  name: 'virtualMachines01'
+  scope: resourceGroup
+  params: { 
+  }
+}
+module virtualMachines02 'virtualMachines-02.bicep' = {
+  name: 'virtualMachines02'
+  scope: resourceGroup
+  params: { 
+  }
+}

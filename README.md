@@ -29,8 +29,10 @@ This infrastructure-as-code solution deploys:
 # Folder Structure
 ```
 .
-├── main.bicep              # Entry point
-├── resources.bicep         # Hub VNet, Firewall, route tables
+├── main.bicep              # Define Modules to deploy
+├── networkResources.bicep  # Vnets for Hub, SiteA and SiteB
+├── virtualMachine-01.bicep # Virtual Machine for Site A
+├── virtualMachine-02.bicep # Virtual Machine for Site B
 └── README.md               # Project documentation
 ```
 
