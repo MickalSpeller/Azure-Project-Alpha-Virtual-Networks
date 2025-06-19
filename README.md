@@ -26,6 +26,8 @@ This infrastructure-as-code solution deploys:
 
 # Architecture Diagram
 
+<pre> ┌─────────────────────────────┐ │ Azure Hub VNet │ │ (10.0.0.0/16 - hub-vnet) │ │ │ │ ┌─────────────────────┐ │ │ │ Shared Services │ │ │ │ - Azure Firewall │ │ │ │ - VPN Gateway │ │ │ │ - Azure Bastion │ │ │ └─────────────────────┘ │ └────────────┬────────────────┘ │ ┌───────────────────────────┴───────────────────────────┐ │ │ ▼ ▼ ┌──────────────────────┐ ┌──────────────────────┐ │ Spoke 1 VNet │ │ Spoke 2 VNet │ │ (10.1.0.0/16 - spoke1)│ │ (10.2.0.0/16 - spoke2)│ │ │ │ │ │ - App VMs │ │ - DB VMs │ │ - Web Subnet │ │ - Backend Subnet │ └──────────────────────┘ └──────────────────────┘ </pre>
+
 # Folder Structure
 ```
 .
