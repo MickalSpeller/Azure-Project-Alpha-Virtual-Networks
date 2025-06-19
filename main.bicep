@@ -12,6 +12,7 @@ module networkResources 'networkResources.bicep' = {
   name: 'networkResources'
   scope: resourceGroup
   params: { 
+    
   }
 }
 module virtualMachines01 'virtualMachines-01.bicep' = {

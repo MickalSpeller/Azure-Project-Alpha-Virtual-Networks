@@ -8,8 +8,7 @@ param siteBPrefix string = '10.30.0.0/16'
 param siteBSubnet1 string = '10.30.1.0/24'
 param siteBSubnet2 string = '10.30.2.0/24'
 
-
-resource hubVnet01 'Microsoft.Network/virtualNetworks@2019-11-01' = {
+resource hubVnet01 'Microsoft.Network/virtualNetworks@2024-07-01' = {
   name: 'hub-vnet-01'
   location: location
   properties: {
@@ -34,7 +33,7 @@ resource hubVnet01 'Microsoft.Network/virtualNetworks@2019-11-01' = {
     ]
   }
 }
-resource siteAVnet01 'Microsoft.Network/virtualNetworks@2019-11-01' = {
+resource siteAVnet01 'Microsoft.Network/virtualNetworks@2024-07-01' = {
   name: 'siteA-vnet-01'
   location: 'westus'
   properties: {
@@ -59,7 +58,7 @@ resource siteAVnet01 'Microsoft.Network/virtualNetworks@2019-11-01' = {
     ]
   }
 }
-resource siteBVnet01 'Microsoft.Network/virtualNetworks@2019-11-01' = {
+resource siteBVnet01 'Microsoft.Network/virtualNetworks@2024-07-01' = {
   name: 'siteB-vnet-01'
   location: 'canadacentral'
   properties: {
@@ -70,12 +69,16 @@ resource siteBVnet01 'Microsoft.Network/virtualNetworks@2019-11-01' = {
     }
     subnets: [
       {
+        type: siteBSubnet1
+        id: siteBSubnet1
         name: 'siteb-sub-10-30-1-0'
         properties: {
           addressPrefix: siteBSubnet1
         }
       }
       {
+        type: siteBSubnet2
+        id: siteBSubnet2
         name: 'siteb-sub-10-30-2-0'
         properties: {
           addressPrefix: siteBSubnet2
